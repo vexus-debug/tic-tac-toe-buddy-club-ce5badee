@@ -3,6 +3,7 @@ import { ClinicalHero } from "@/site/components/heroes";
 import heroPhoto from "@/assets/site/hero-dental-lab.jpg";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
+import PaperComparison from "@/site/components/PaperComparison";
 import { usePageMeta } from "@/site/components/usePageMeta";
 import { LAB_PRICE_PER_CASE, LAB_MIN_TOPUP, LAB_SETUP_FEE, LAB_FREE_CREDITS, labTopupCost } from "@/lib/labCredits";
 
@@ -29,6 +30,16 @@ const DentalLabPricing = () => {
         photo={{ src: heroPhoto, alt: "Dental lab technician at work" }}
       />
       <div className="mx-auto max-w-4xl space-y-12 px-4 py-12 sm:px-6">
+        <PaperComparison
+          title={`You already spend ₦${LAB_PRICE_PER_CASE}+ on docket books and paper slips. This one never gets lost on the bench.`}
+          body={`Carbon-copy lab slips, work orders, delivery books and printed invoices easily cost ₦${LAB_PRICE_PER_CASE} or more per case.`}
+          priceLine={`For ₦${LAB_PRICE_PER_CASE} per case:`}
+          points={[
+            { title: "Tracked from anywhere", body: "Technicians, managers and client dentists see case stages, shade notes and photos in real time." },
+            { title: "500% more secure", body: "No lost slips between riders and the bench, no disputed remakes. Every note is permanently logged." },
+            { title: "Digital delivery receipts", body: "Invoices and dispatch receipts are created automatically, with zero paperwork." },
+          ]}
+        />
         <section className="grid gap-6 md:grid-cols-2">
           {cards.map((t) => (
             <div key={t.name} className={`rounded-2xl border p-6 ${t.featured ? "border-primary bg-primary/5" : "border-border bg-background"}`}>

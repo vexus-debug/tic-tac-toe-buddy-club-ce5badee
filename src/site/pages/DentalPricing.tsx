@@ -4,6 +4,7 @@ import heroPhoto from "@/assets/site/hero-dental-desk.jpg";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import CaseCalculator from "@/site/components/CaseCalculator";
+import PaperComparison from "@/site/components/PaperComparison";
 
 const WHATSAPP = "https://wa.me/2349017758165?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Clinexus%20dental%20pricing";
 
@@ -24,6 +25,16 @@ const DentalPricing = () => (
       photo={{ src: heroPhoto, alt: "Patient paying at a dental clinic front desk" }}
     />
     <div className="mx-auto max-w-5xl space-y-12 px-4 py-12 sm:px-6">
+      <PaperComparison
+        title="You already spend ₦400 on paper folders. This one is 500% more secure and works from anywhere."
+        body="Patient cards, printed chart slips, treatment sheets and folders already cost your clinic around ₦300–₦500 per visit."
+        priceLine="For the same ₦400:"
+        points={[
+          { title: "Accessible from anywhere", body: "Open patient records, x-rays and clinical notes from your phone, tablet or home, at any branch." },
+          { title: "500% more secure", body: "No missing charts, torn or water-damaged files. Backed up continuously, with every change logged." },
+          { title: "Zero search time", body: "Pull up any patient's full history in 2 seconds instead of digging through file cabinets." },
+        ]}
+      />
       <section className="grid gap-6 md:grid-cols-3">
         {tiers.map((t) => (
           <div key={t.name} className={`rounded-2xl border p-6 ${t.featured ? "border-primary bg-primary/5" : "border-border bg-background"}`}>

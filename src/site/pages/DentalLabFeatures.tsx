@@ -11,9 +11,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-const assets = import.meta.glob("@/assets/dlab-features/*.asset.json", { eager: true, import: "default" }) as Record<string, { url: string }>;
-const img = (name: string) => Object.entries(assets).find(([k]) => k.endsWith(`/${name}.png.asset.json`))?.[1].url ?? "";
-const shot = (name: string, caption: string): Shot => ({ file: img(name), caption });
+const shot = (name: string, caption: string): Shot => ({ file: `${name}.png`, caption });
 
 const WHATSAPP = "https://wa.me/2349017758165?text=Hello%20I%20would%20like%20to%20know%20more%20about%20Clinexus%20for%20dental%20labs";
 const EASE = [0.22, 1, 0.36, 1] as const;

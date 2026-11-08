@@ -7,8 +7,10 @@ const columns = [
   { title: "Solutions", links: [
     { label: "Eye clinics", to: "/industries/eye-clinics" },
     { label: "Dental clinics", to: "/industries/dental-clinics" },
-    { label: "Dental clinic pricing", to: "/industries/dental-clinics/pricing" },
     { label: "Dental labs", to: "/industries/dental-labs" },
+  ]},
+  { title: "Pricing", links: [
+    { label: "Dental clinic pricing", to: "/industries/dental-clinics/pricing" },
     { label: "Dental lab pricing", to: "/industries/dental-labs/pricing" },
   ]},
   { title: "Resources", links: [
@@ -71,7 +73,7 @@ const Footer = () => {
               <span className="block">Ikeja, Lagos, Nigeria</span>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:col-span-4 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:col-span-4 lg:grid-cols-5">
           {columns.map((col) => (
             <div key={col.title} className="space-y-4">
               <h4 className="text-sm font-semibold text-foreground">{col.title}</h4>

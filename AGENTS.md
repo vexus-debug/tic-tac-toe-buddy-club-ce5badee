@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+
+## Import compatibility
+
+- Keep the target project’s pinned TanStack Start, Router, and Vite versions when importing external application dependencies, because these framework versions are managed by Lovable.

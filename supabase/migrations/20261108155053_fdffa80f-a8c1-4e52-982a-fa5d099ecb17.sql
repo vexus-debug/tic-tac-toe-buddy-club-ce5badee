@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.ensure_lab_case_credit() FROM PUBLIC, anon, authenticated;
